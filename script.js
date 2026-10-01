@@ -32,11 +32,10 @@ const firstAuthorTitles = new Set(['Provenance of the Late Triassic–Early Jura
 const correspondingAuthors = {
   'Early Permian deltaic systems and weathering differentiation in the southwestern Yangtze Block':['Jintao Zhou','Wenchao Yu'],
   'Geochemical constraints on critical metals in the Jajarm bauxite deposit':['Maryam Khosravi'],
-  'Geochemistry of rare earth elements of the Gano bauxite deposit':['Maryam Khosravi'],
+  'Geochemistry of rare earth elements of the Gano bauxite deposit':['Maryam Khosravi'],  'Geochemical constraints on the Gano karst bauxite deposit':['Maryam Khosravi'],
   'Continental weathering and Early Carboniferous bauxite deposits in South China':['Wenchao Yu','Yuansheng Du']
 };
-paperData.forEach(([year,title])=>{if(!correspondingAuthors[title])correspondingAuthors[title]=['Wenchao Yu'];});
-paperData.sort((a,b)=>Number(firstAuthorTitles.has(b[1])||correspondingAuthors[b[1]].includes('Jintao Zhou'))-Number(firstAuthorTitles.has(a[1])||correspondingAuthors[a[1]].includes('Jintao Zhou')));
+paperData.forEach(([year,title])=>{if(!correspondingAuthors[title])correspondingAuthors[title]=['Wenchao Yu'];});paperData.sort((a,b)=>Number(firstAuthorTitles.has(b[1])||correspondingAuthors[b[1]].includes('Jintao Zhou'))-Number(firstAuthorTitles.has(a[1])||correspondingAuthors[a[1]].includes('Jintao Zhou'))||Number(b[0])-Number(a[0]));
 const publicationList=document.querySelector('.publication-list');
 if(publicationList){publicationList.innerHTML=paperData.map(([year,title,titleZh,citation],index)=>{
   const firstAuthor=firstAuthorTitles.has(title), corresponding=correspondingAuthors[title], userCorresponding=corresponding.includes('Jintao Zhou');
