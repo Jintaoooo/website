@@ -1,0 +1,7 @@
+.lang-zh{display:none}
+.chinese .lang-en{display:none}
+.chinese .lang-zh{display:inline}
+.header-actions{display:flex;align-items:center;gap:20px}
+.language-toggle{border:0;background:none;color:var(--muted);font:10px 'DM Mono',monospace;letter-spacing:.08em;padding:5px;cursor:pointer}
+.language-toggle:hover,.language-toggle .active-label{color:var(--orange)}
+.chinese body{font-family:'Noto Sans SC','Manrope',sans-serif}

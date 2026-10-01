@@ -1,0 +1,12 @@
+.publication-list{border-top:1px solid var(--line)}
+.publication-item{border-bottom:1px solid var(--line)}
+.publication-item summary{display:grid;grid-template-columns:90px 1fr 30px;gap:20px;align-items:center;list-style:none;cursor:pointer;padding:25px 0;font-size:18px;letter-spacing:-.02em}
+.publication-item summary::-webkit-details-marker{display:none}
+.publication-item summary:hover .pub-title{color:var(--orange)}
+.pub-year{font:11px 'DM Mono',monospace;color:var(--orange);letter-spacing:.08em}
+.pub-title{font-weight:700;transition:color .2s}
+.pub-arrow{font-size:22px;color:var(--orange);transition:transform .2s}
+.publication-item[open] .pub-arrow{transform:rotate(90deg)}
+.pub-detail{padding:0 50px 28px 110px;color:var(--muted);font-size:14px;max-width:900px}
+.pub-detail p{margin:0 0 12px}.pub-detail em{color:var(--ink)}.pub-note{font-size:13px;border-left:2px solid var(--lime);padding-left:15px}
+@media(max-width:800px){.publication-item summary{grid-template-columns:55px 1fr 20px;font-size:16px;gap:10px}.pub-detail{padding:0 20px 25px 65px;font-size:13px}}
